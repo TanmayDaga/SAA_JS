@@ -1,0 +1,26 @@
+<!-- Requires navlink -->
+
+<nav class="md:max-h-16 md:h-16 max-md:max-h-14 max-md:h-14 bg-red-500 text-white">
+  <h2 class="text-white">
+    <img src="/assets/logo.png" alt="Logo" class="inline-block h-8 w-auto" />
+    SAA
+  </h2>
+  <ul class="text-white">
+    <% Object.entries(NavLinks).forEach(([key, [text, linkOrSublinks]]) => { %>
+      <li>
+        <a href="<%= Array.isArray(linkOrSublinks) ? '' : linkOrSublinks %>" class="hover:underline">
+          <%= text %>
+        </a>
+        <% if (Array.isArray(linkOrSublinks)) { %>
+          <ul>
+            <% linkOrSublinks.forEach(([subText, subLink]) => { %>
+              <li>
+                <a href="<%= subLink %>" class="hover:underline"><%= subText %></a>
+              </li>
+            <% }); %>
+          </ul>
+        <% } %>
+      </li>
+    <% }); %>
+  </ul>
+</nav>

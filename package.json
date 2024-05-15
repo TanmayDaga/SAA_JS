@@ -1,0 +1,39 @@
+{
+  "name": "saa_js",
+  "version": "1.0.0",
+  "description": " website for IITJ's Society of Alumni Affairs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
+  },
+  "keywords": [
+    "iitj",
+    "saa",
+    "Society",
+    "Alumni",
+    "Affairs",
+    "Alumni",
+    "Affairs"
+  ],
+  "author": "TanmayDaga",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

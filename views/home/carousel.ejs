@@ -1,0 +1,29 @@
+<!-- Requires media -->
+
+<section class="flex justify-center items-center h-screen" id="carousel">
+    <section class="relative overflow-hidden w-80 h-48">
+      <div class="absolute top-0 left-0 w-full h-full flex">
+        <div class="w-full flex transition-transform duration-300 ease-in-out transform">
+          <% CarouselMedia.forEach((element) => { %>
+            <img class="w-full h-full bg-red-500" src="<%= element.dataValues.path %>"></img>
+          <% }); %>
+        </div>
+      </div>
+    </section>
+  </section>
+  
+  <script >
+    document.addEventListener("DOMContentLoaded", function() {
+      const carousel = document.getElementById("carousel");
+      let counter = 0;
+  
+      setInterval(() => {
+        counter++;
+        if (counter === 3) {
+          counter = 0;
+        }
+        carousel.style.transform = `translateX(-${counter * 100}%)`;
+      }, 2000);
+    });
+  </script>
+  
