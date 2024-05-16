@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .gallery-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: calc(33.333% - 20px);
+      box-sizing: border-box;
+    }
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gallery</h1>
+  <div class="gallery">
+    <% Gallery.forEach(item => { %>
+      <div class="gallery-item">
+        <h2><%= item.event %></h2>
+        <p><%= item.eventDate ? new Date(item.eventDate).toLocaleDateString() : 'No date available' %></p>
+        <div class="media">
+          <% if (item.mediaPaths) { %>
+            <% item.mediaPaths.forEach(mediaPath => { %>
+              <img src="<%= mediaPath %>" alt="Media for <%= item.event %>">
+            <% }); %>
+          <% } else { %>
+            <p>No media available</p>
+          <% } %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>

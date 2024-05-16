@@ -16,3 +16,4 @@ db.ORM.sync({ force: false }).then(() => {
 
 app.use("/", require("./routes/home"));
 app.use("/", require("./routes/team"));
+app.use("/", require("./routes/gallery"));
