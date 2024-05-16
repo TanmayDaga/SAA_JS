@@ -15,7 +15,30 @@ const HOME_PAGE_NAVLINKS = {
   contact: ["Contact", "/contact"],
 };
 
+const TEAM_PAGE_RENDER_INPUTS = {
+  TeamMembers: "TeamMembers",
+};
+
+const TEAM_PAGE_POSITION_TYPES = {
+  1: "President",
+  2: "Vice President",
+  3: "Overall Coordinators",
+  4: "Team Coordinators",
+  5: "Team Members",
+};
+
+const TEAM_PAGE_TEAM_TYPES = {
+  1: "Super",
+  2: "Design",
+  3: "Content",
+  4: "Tech and Communication",
+  5: "Events",
+};
+
 module.exports = {
   HOME_PAGE_RENDER_INPUTS,
   HOME_PAGE_NAVLINKS,
+  TEAM_PAGE_RENDER_INPUTS,
+  TEAM_PAGE_POSITION_TYPES,
+  TEAM_PAGE_TEAM_TYPES,
 };

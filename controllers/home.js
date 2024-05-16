@@ -1,6 +1,6 @@
 const CONSTANTS = require("../utils/constants");
 const { CarouselMedia } = require("../models/home/Carousel");
-const { data } = require("autoprefixer");
+
 module.exports = {
   homeView: async (req, res, next) => {
     res.render("home", {

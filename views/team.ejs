@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Members</title>
+  </head>
+  <body>
+    <h1>Team Members</h1>
+    <ul>
+      <% TeamMembers.forEach(member => { %>
+      <li>
+        <img src="<%= member.imagePath %>" alt="<%= member.name %>" /><br />
+        <strong>Name:</strong> <%= member.name %><br />
+        <strong>Position:</strong> <%= member.position %><br />
+        <strong>Team Type:</strong> <%= member.teamType %><br />
+        <% if (member.phoneNumber) { %>
+        <strong>Phone Number:</strong> <%= member.phoneNumber %><br />
+        <% } %> <% if (member.email) { %>
+        <strong>Email:</strong> <%= member.email %><br />
+        <% } %>
+      </li>
+      <% }); %>
+    </ul>
+  </body>
+</html>

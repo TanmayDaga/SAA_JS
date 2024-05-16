@@ -10,9 +10,9 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 db.ORM.sync({ force: false }).then(() => {
- 
+  require("./test/init").init();
   app.listen(PORT, console.log("server is listening at port:" + PORT));
 });
 
-
 app.use("/", require("./routes/home"));
+app.use("/", require("./routes/team"));
