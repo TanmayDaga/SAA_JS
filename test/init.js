@@ -1,7 +1,8 @@
 async function init() {
-  require("./home/init").init();
-  require("./team/init").init();
-  require("./gallery/init").init();
+  await require("./home/init").init();
+  await require("./team/init").init();
+  await require("./gallery/init").init();
+  await require("./events/init").init();
 }
 
 module.exports = { init };

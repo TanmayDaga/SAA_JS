@@ -43,6 +43,12 @@ const TeamMembers = db.ORM.define("Team", {
       isEmail: true,
     },
   },
+  instagramLink: {
+    type: db.DataTypes.STRING,
+  },
+  linkedinLink: {
+    type: db.DataTypes.STRING
+  }
 });
 
 module.exports = {

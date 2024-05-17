@@ -1,16 +1,16 @@
 <!-- Requires media -->
-
 <section class="flex justify-center items-center h-screen" id="carousel">
-    <section class="relative overflow-hidden w-80 h-48">
+  <section class="relative overflow-hidden w-80 h-48">
       <div class="absolute top-0 left-0 w-full h-full flex">
-        <div class="w-full flex transition-transform duration-300 ease-in-out transform">
-          <% CarouselMedia.forEach((element) => { %>
-            <img class="w-full h-full bg-red-500" src="<%= element.dataValues.path %>"></img>
-          <% }); %>
-        </div>
+          <div class="carousel-container w-full flex transition-transform duration-300 ease-in-out transform">
+              <!-- Carousel items will be rendered here
+              <% CarouselMedia.forEach((element) => { %>
+                  <img class="carousel-item w-full h-full bg-red-500" src="<%= element.dataValues.path %>"></img>
+              <% }); %> -->
+          </div>
       </div>
-    </section>
   </section>
+</section>
   
   <script >
     document.addEventListener("DOMContentLoaded", function() {

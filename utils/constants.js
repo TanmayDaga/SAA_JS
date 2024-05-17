@@ -39,6 +39,11 @@ const GALLERY_PAGE_RENDER_INPUTS = {
   Gallery: "Gallery",
 };
 
+const EVENTS_PAGE_RENDER_INPUTS = {
+  Events: "Events",
+  EventTypes: "EventTypes",
+};
+
 module.exports = {
   HOME_PAGE_RENDER_INPUTS,
   HOME_PAGE_NAVLINKS,
@@ -46,4 +51,5 @@ module.exports = {
   TEAM_PAGE_POSITION_TYPES,
   TEAM_PAGE_TEAM_TYPES,
   GALLERY_PAGE_RENDER_INPUTS,
+  EVENTS_PAGE_RENDER_INPUTS,
 };
