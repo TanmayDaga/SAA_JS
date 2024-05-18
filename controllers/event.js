@@ -1,6 +1,7 @@
 const CONSTANTS = require("../utils/constants");
 const { EventTypes } = require("../models/events/EventTypes");
 const { Events } = require("../models/events/Events");
+const utils = require("../utils/utils");
 
 module.exports = {
   eventsView: async (req, res, next) => {
@@ -15,6 +16,15 @@ module.exports = {
         attributes: {
           exclude: ["createdAt", "updatedAt"],
         },
+      }).then((data) => {
+
+        return data.map((ele) => {
+          return {
+            ...ele,
+            mediaFiles: utils.getFilesArrayInAFolder(ele.mediaDirectory),
+          };
+        })
+        
       }),
     });
     next();

@@ -12,7 +12,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 // Generate CSS for each main template and its partials
-const templates = ['home', 'team','gallery','teams','events']; // Add more templates as needed
+const templates = ['home', 'team','gallery','events']; // Add more templates as needed
 
 templates.forEach(template => {
   const mainTemplatePath = path.join(templatesDir, `${template}.ejs`);

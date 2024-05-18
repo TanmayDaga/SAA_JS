@@ -2,15 +2,15 @@ const db = require("../../config/db");
 
 const EventTypes = db.ORM.define("EventTypes", {
   id: {
-    type: db.DataTypes.INTEGER,
-    autoIncrement: true,
+    type: db.DataTypes.UUID,
+    defaultValue: db.DataTypes.UUIDV4,
     primaryKey: true,
   },
   name: {
     type: db.DataTypes.STRING,
     allowNull: false,
     validate: {
-      isNull: {
+      notNull: {
         msg: "Please enter EventType name",
       },
     },
